@@ -1,6 +1,9 @@
 Elucidat API : Example .NET client
 ==================================
 
+An example .NET client for the [Elucidat E-learning Authoring tool](https://www.elucidat.com) API.
+
+
 Prerequisites
 -------------
 
