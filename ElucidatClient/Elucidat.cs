@@ -269,7 +269,8 @@ namespace ElucidatClient {
         /// <summary>
         /// Set an author's role
         /// </summary>
-        /// <param name="data"></param>
+        /// <param name="authorEmail"></param>
+        /// <param name="role"></param>
         /// <returns></returns>
         public MessageModel ChangeAuthorRole(string authorEmail, string role) {
             return Post<MessageModel>("authors/role", new Dictionary<string, string> {
@@ -330,16 +331,16 @@ namespace ElucidatClient {
         /// </summary>
         /// <param name="releaseCode"></param>
         /// <returns></returns>
-        public IList<IDictionary<string, string>> GetPollResults(string releaseCode) {
-            return Get<IList<IDictionary<string, string>>>("releases/answers", new Dictionary<string, string> { { "release_code", releaseCode } });
+        public IList<PollResultsModel> GetPollResults(string releaseCode) {
+            return Get<IList<PollResultsModel>>("releases/answers", new Dictionary<string, string> { { "release_code", releaseCode } });
         }
 
         /// <summary>
         /// Retrieve a list of events for which notification callbacks have been configured
         /// </summary>
         /// <returns></returns>
-        public IList<IDictionary<string, string>> GetEventSubscriptions() {
-            return Get<IList<IDictionary<string, string>>>("event");
+        public IDictionary<string, string> GetEventSubscriptions() {
+            return Get<Dictionary<string, string>>("event");
         }
 
         /// <summary>

@@ -50,6 +50,7 @@
     <Compile Include="Models\LinkModel.cs" />
     <Compile Include="Models\MessageModel.cs" />
     <Compile Include="Models\NonceModel.cs" />
+    <Compile Include="Models\PollResultsModel.cs" />
     <Compile Include="Models\ProjectModel.cs" />
     <Compile Include="Models\ReleaseModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
